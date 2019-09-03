@@ -1,4 +1,4 @@
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain } from 'electron'
 import {
   createProtocol,
   installVueDevtools
@@ -16,7 +16,10 @@ function createWindow() {
   win = new BrowserWindow({
     width: 1200,
     height: 850,
-    // frame: false,
+    minWidth: 1000,
+    minHeight: 750,
+    frame: false,
+    transparent: true,
     titleBarStyle: 'hiddenInset'
   })
 
@@ -37,6 +40,16 @@ function createWindow() {
     win = null
   })
 }
+
+ipcMain.on('window-minimize', (e: any) => win.minimize())
+ipcMain.on('window-maximize', (e: any) => {
+  if (win.isMaximized()) {
+    win.unmaximize()
+  } else {
+    win.maximize()
+  }
+})
+ipcMain.on('window-close', (e: any) => win.close())
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {

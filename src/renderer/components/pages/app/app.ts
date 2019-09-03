@@ -6,10 +6,13 @@
 
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
 import template from './app.vue'
+import Topbar from 'components/tags/topbar'
 
 @Component({
   name: 'page-app',
   mixins: [template],
-  components: {}
+  components: {
+    Topbar
+  }
 })
 export default class App extends Vue {}
