@@ -5,10 +5,11 @@
  */
  
 <template>
-  <div class="page-app">
-    <topbar></topbar>
-    <router-view></router-view>
-  </div>
+    <div class="page-app"
+        :class="[`platform-${currentPlatform}`]">
+        <topbar></topbar>
+        <router-view></router-view>
+    </div>
 </template>
 
 <style lang="stylus" scoped src="./app.styl"></style>

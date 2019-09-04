@@ -16,4 +16,7 @@ export default class Topbar extends Vue {
   broadcastIPCEvent(event: string) {
     IPC.send(event)
   }
+  get currentPlatform() {
+    return this.$store.state.currentPlatform
+  }
 }
