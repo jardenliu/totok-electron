@@ -18,6 +18,10 @@ module.exports = {
     ]
     config.resolve.modules.push(resolve(__dirname, 'src'))
     config.resolve.alias['@'] = resolve(__dirname, 'src/renderer')
+    config.resolve.alias['base'] = resolve(
+      __dirname,
+      'src/renderer/styles/base'
+    )
     config.resolve.alias['components'] = resolve(
       __dirname,
       'src/renderer/components'
