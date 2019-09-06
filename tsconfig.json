@@ -7,6 +7,7 @@
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
@@ -14,7 +15,15 @@
     "types": ["webpack-env", "mocha", "chai"],
     "paths": {
       "@/*": ["renderer/*"],
-      "components/*": ["renderer/components/*"]
+      "api/*": ["renderer/api/*"],
+      "assets/*": ["renderer/assets/*"],
+      "common/*": ["renderer/common/*"],
+      "components/*": ["renderer/components/*"],
+      "filters/*": ["renderer/filters/*"],
+      "mixins/*": ["renderer/mixins/*"],
+      "router/*": ["renderer/router/*"],
+      "store/*": ["renderer/store/*"],
+      "styles/*": ["renderer/styles/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "typeRoots": ["node_modules/@types", "src/typings"]
