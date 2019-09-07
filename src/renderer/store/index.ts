@@ -8,7 +8,7 @@ import {
 } from 'vuex-class'
 import OS from 'os'
 
-import { decorator, keymirror } from './utils'
+import { decorator, keymirror, getter, mutation, action } from './utils'
 
 Vue.use(Vuex)
 
@@ -16,11 +16,15 @@ let state = {
   currentPlatform: OS.platform()
 }
 
-let getters = {}
+let getters = getter(state, {
+  currentPlatforn(state) {
+    return state.currentPlatform
+  }
+})
 
-let mutations = {}
+let mutations = mutation(state, {})
 
-let actions = {}
+let actions = action(state, {})
 
 export let types = {
   state: keymirror(state),
