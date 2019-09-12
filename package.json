@@ -27,7 +27,10 @@
     ]
   },
   "dependencies": {
+    "NeteaseCloudMusicApi": "^3.22.1",
     "css-reset-and-normalize": "^2.1.0",
+    "pac-proxy-agent": "^3.0.0",
+    "request": "^2.88.0",
     "vue": "^2.5.22",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",

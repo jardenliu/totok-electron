@@ -25,6 +25,13 @@ module.exports = {
       __dirname,
       'src/renderer/styles/base'
     )
+
+    config.module.rules.push({
+      test: /node_modules[\/\\](iconv-lite)[\/\\].+/,
+      resolve: {
+        aliasFields: ['main']
+      }
+    })
   },
   pluginOptions: {
     // vue-cli-plugin-electron-builder Doc, check ou: https://nklayman.github.io/vue-cli-plugin-electron-builder/
