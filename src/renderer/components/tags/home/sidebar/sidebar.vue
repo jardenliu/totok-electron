@@ -5,7 +5,8 @@
  */
  
 <template>
-    <div>
+    <div class="sidebar">
+        sidebar
     </div>
 </template>
 

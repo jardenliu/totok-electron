@@ -1,2 +1,14 @@
 @import './var'
 @import './mixins'
+
+flex-align($alignItems, $justify-content, $display = null)
+    if $display == null
+        display flex
+    else 
+        display $display
+    align-items $alignItems
+    justify-content $justify-content
+
+flex-column-align($alignItems, $justify-content, $display = null)
+    flex-direction column
+    flex-align($alignItems, $justify-content, $display)

@@ -6,7 +6,12 @@
  
 <template>
     <div class="view-home">
-        <sidebar></sidebar>
+        <div class="home-container">
+            <sidebar></sidebar>
+            <main-container></main-container>
+        </div>
+
+        <playbar></playbar>
     </div>
 </template>
 

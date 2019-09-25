@@ -5,9 +5,9 @@
  */
  
 <template>
-  <div>
-    Playbar
-  </div>
+    <div class="playbar">
+        playbar
+    </div>
 </template>
 
 <style lang="stylus" scoped src="./playbar.styl"></style>
